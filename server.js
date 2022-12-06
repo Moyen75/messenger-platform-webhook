@@ -180,6 +180,9 @@ app.post('/webhook', (req, res) => {
 		res.sendStatus(404);
 	}
 });
+app.get("/status", (req, res, next) => {
+	res.status(200).json("OK")
+})
 
 app.listen(PORT, () =>
 	console.log(
